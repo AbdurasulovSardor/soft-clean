@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 18px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      width: 47px;
+      height: 62px;
+      margin-right: 10px;
+    }
+    p {
+      color: var(--first-color);
+      font-size: var(--h3-font-size);
+      font-weight: 600;
+      line-height: 140%;
+    }
+    span {
+      color: var(--text-color-light);
+      font-size: var(--text-font-size);
+      font-weight: 600;
+      line-height: 140%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: 0.3s ease;
+  }
+  &__item {
+    display: flex;
+
+    &:first-child {
+      display: block;
+    }
+  }
+  &__phone {
+    color: var(--text-color);
+    font-size: var(--h3-font-size);
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 4px;
+  }
+  &__workhour {
+    display: flex;
+    align-items: center;
+    color: var(--text-color-light);
+    font-size: var(--h4-font-size);
+    font-weight: 500;
+    line-height: 100%;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: #20ff87;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+  &__social-desc {
+    color: var(--text-color);
+    text-align: right;
+    font-size: var(--text-font-size);
+    font-weight: 600;
+    line-height: 140%;
+    margin-right: 15px;
+  }
+  &__icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    &:nth-child(1n) {
+      margin-right: 10px;
+    }
+  }
+  &__order {
+    color: var(--text-color);
+    font-size: var(--text-font-size);
+    font-weight: 600;
+    line-height: 100%;
+    padding: 22px;
+    border: 1px solid var(--first-color);
+    border-radius: 100px;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: var(--first-color);
+      color: #fff;
+    }
+  }
+  &__toggle {
+    display: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
+
+.showNav {
+  top: 0 !important;
+}

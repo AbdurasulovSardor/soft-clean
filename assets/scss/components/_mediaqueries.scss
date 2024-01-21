@@ -1,0 +1,47 @@
+@media screen and (max-width: 940px) {
+  .nav__item {
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .nav {
+    &__info {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      background: #fff;
+      padding: 40px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+      transition: 0.4s;
+    }
+    &__item {
+      flex-direction: column;
+      align-items: center;
+
+      &:last-child {
+        display: block;
+        padding-bottom: 20px;
+      }
+      &:nth-child(2n) {
+        display: block;
+        text-align: center;
+      }
+    }
+    &__social-desc {
+      text-align: center;
+      margin: 0;
+    }
+    &__icon {
+      display: inline-block;
+    }
+    &__toggle {
+      display: block;
+      z-index: 5;
+    }
+  }
+}

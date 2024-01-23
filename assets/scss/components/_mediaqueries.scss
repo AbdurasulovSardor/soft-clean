@@ -1,3 +1,17 @@
+@media screen and (max-width: 1080px) {
+  .services {
+    &__item-data {
+      padding: 40px;
+    }
+    &__item-contact {
+      max-width: 400px;
+    }
+    &__item-right::before {
+      background-size: 550px;
+    }
+  }
+}
+
 @media screen and (max-width: 986px) {
   .footer__info {
     flex-wrap: wrap;
@@ -10,6 +24,32 @@
   .nav__item {
     &:last-child {
       display: none;
+    }
+  }
+  .home {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &__container {
+      padding-top: 620px;
+      background-position: -50px 60px;
+    }
+    &__item {
+      top: 38%;
+      left: 45%;
+    }
+  }
+  .services {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__information {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__item-data {
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }
@@ -64,5 +104,63 @@
     max-width: 100%;
     flex-direction: column;
     text-align: center;
+  }
+  .services {
+    &__informations {
+      flex-direction: column;
+      border-radius: 50px;
+    }
+    &__item-data {
+      align-items: center;
+    }
+    &__item-right::before {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item-discount {
+      flex-direction: column;
+      align-items: center;
+      padding-right: 30px;
+
+      p {
+        font-size: 12px;
+      }
+      li {
+        font-size: 10px;
+      }
+      img {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .services {
+    &__item-title {
+      font-size: 22px;
+    }
+    &__item-subtitle {
+      font-size: 18px;
+    }
+    &__item-data {
+      padding: 20px;
+    }
+    &__item-contact {
+      h3 {
+        font-size: 18px;
+      }
+    }
+    &__item-btn {
+      padding: 15px 20px;
+      text-align: center;
+    }
   }
 }

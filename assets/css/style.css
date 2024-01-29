@@ -658,6 +658,90 @@ img {
   border-radius: 30px;
 }
 
+.aboutus {
+  background: var(--body-color);
+}
+.aboutus__title {
+  max-width: 552px;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.aboutus__title span {
+  font-weight: 600;
+}
+.aboutus__description {
+  max-width: 600px;
+  background: var(--second-color);
+  padding: 15px 40px;
+  margin: 0 auto;
+  border-radius: 100px;
+  text-align: center;
+  color: #fff;
+  font-size: var(--h4-font-size);
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 50px;
+}
+.aboutus__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.aboutus__card {
+  padding: 25px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+.aboutus__card:first-child::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 110px;
+  background-image: url(".././images/check.png"), url(".././images/list.png");
+  background-repeat: no-repeat;
+  background-size: 80px, contain;
+  background-position: 30px 30px, 90px 0;
+  margin-bottom: 20px;
+  transform: rotate(15deg);
+}
+.aboutus__card:nth-child(2n)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 110px;
+  background-image: url(".././images/bottle-1.png"), url(".././images/bottle-2.png"), url(".././images/hypoallergenic.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0, 30px 0, 30px 0;
+  margin-bottom: 20px;
+}
+.aboutus__card:last-child::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 110px;
+  margin-bottom: 20px;
+  background-image: url(".././images/shield.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.aboutus__card-title {
+  margin-bottom: 12px;
+}
+.aboutus__card-description {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
 .footer {
   margin-top: 0;
   padding: 40px 0;
@@ -782,6 +866,23 @@ img {
   .company__information {
     padding: 60px;
     padding-left: 220px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .aboutus__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .aboutus__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutus__card:first-child::before {
+    background-position: 40% 20px, 50%;
+  }
+  .aboutus__card:nth-child(2n)::before {
+    background-position: 40%, 45%, 50%;
   }
 }
 @media screen and (max-width: 765px) {

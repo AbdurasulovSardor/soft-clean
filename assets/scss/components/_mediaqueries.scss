@@ -80,6 +80,29 @@
   }
 }
 
+@media screen and (max-width: 850px) {
+  .aboutus {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      &:first-child::before {
+        background-position:
+          40% 20px,
+          50%;
+      }
+      &:nth-child(2n)::before {
+        background-position: 40%, 45%, 50%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 765px) {
   .nav {
     &__info {
